@@ -268,6 +268,7 @@ lilyglyphlist = [
 ("asciicomma",   "comma",                  0x002c, 0,'gy', 1,'gy'),
 ("asciiplus",    "plus",                   0x002b, 0,'gy', 1,'gy'),
 ("asciiminus",   "hyphen",                 0x002d, 0,'gy', 1,'gy'),
+("asciiendash",  "endash",                 0x2013, 0,'gy', 1,'gy'),
 ("bowdown",      "scripts.downbow",        0, 0.5,0, 1,0),
 ("bowup",        "scripts.upbow",          0, 0.5,0, 1,0),
 ("bracketlowerlily", "brackettips.down",   0, 0,'hy', 1,'hy'),
@@ -1601,6 +1602,7 @@ def simple_output(args):
     "slashsemi",
     "slashminim",
     "slashcrotchet",
+    ("asciiendash", 0x2013),
     ]
 
     code = 0x21 # use sequential code points for anything not explicitly given

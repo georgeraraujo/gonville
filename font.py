@@ -1871,6 +1871,14 @@ def _(cont):
 
     cont.default_nib = 12
 
+@define_glyph("asciiendash")
+def _(cont): # en dash (U+2013), for volta ranges such as "1.-3."
+    # Saved data from gui.py
+    c0 = StraightLine(cont, 500, 362, 600, 362)
+    # End saved data
+
+    cont.default_nib = 12
+
 @define_glyph("asciicomma")
 def _(cont):
     # Saved data from gui.py
@@ -1886,7 +1894,7 @@ def _(cont):
     cont.extra = "newpath 500 439 34 0 360 arc fill"
 for x in [getattr(font, name) for name in
           ['big0','big1','big2','big3','big5','big6','big7','big8','big9',
-           'asciiplus','asciiminus','asciicomma','asciiperiod']]:
+           'asciiplus','asciiminus','asciiendash','asciicomma','asciiperiod']]:
     for field in ['ty', 'by', 'gy', 'smufl_oy']:
         setattr(x, field, getattr(font.big4, field))
 
